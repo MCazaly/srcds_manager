@@ -4,7 +4,7 @@ from manager import Manager
 
 
 def main():
-    chdir(path.dirname(__file__))
+    chdir(path.dirname(path.abspath(__file__)))
     with open("servers.json", "r") as file:
         servers = json.load(file)
     manager = Manager(servers)
