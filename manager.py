@@ -47,5 +47,3 @@ class Host(object):
 
     def get_players(self):
         return a2s.players(self.address)
-
-
