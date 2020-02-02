@@ -4,11 +4,12 @@ from manager import Manager
 
 
 def main():
-    chdir(path.abspath(__file__))
-    servers = json.load("servers.json")
+    chdir(path.dirname(__file__))
+    with open("servers.json", "r") as file:
+        servers = json.load(file)
     manager = Manager(servers)
     manager.safe_restart()
 
-1
+
 if __name__ == "__main__":
     main()
