@@ -5,7 +5,7 @@ from manager import Manager
 
 def main():
     chdir(path.dirname(__file__))
-    with open("servers.json", "r") as file:
+    with open("servers_example.json", "r") as file:
         servers = json.load(file)
     manager = Manager(servers)
     manager.safe_restart()
