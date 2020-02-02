@@ -1,0 +1,10 @@
+{
+  "example_server": {
+    "host": "example.com",
+    "port": 27015
+  },
+  "another_example": {
+    "host": "example.org",
+    "port": 27016
+  }
+}
