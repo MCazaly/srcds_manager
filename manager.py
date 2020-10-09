@@ -23,7 +23,7 @@ class Manager(object):
                 print(f"Warning: Server \"{name}\" could not be reached and may be offline!")
                 continue
             if len(players) > threshold:
-                print(f"Server \"{name}\" will not be restarted as it has {players} players online.")
+                print(f"Server \"{name}\" will not be restarted as it has {len(players)} players online.")
                 continue
             print(f"Server \"{name}\" will be restarted...")
             command = f"docker stop {name}; docker start {name}"
