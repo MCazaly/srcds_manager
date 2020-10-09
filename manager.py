@@ -1,5 +1,5 @@
 import a2s
-from socket import gaierror
+from socket import gaierror, timeout
 from os import system
 
 
@@ -19,7 +19,7 @@ class Manager(object):
         for name in self.servers:
             try:
                 players = self.servers[name].get_players()
-            except gaierror:
+            except (gaierror, timeout):
                 print(f"Warning: Server \"{name}\" could not be reached and may be offline!")
                 continue
             if len(players) > threshold:
